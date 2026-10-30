@@ -17,14 +17,14 @@ async function testApplication() {
             "file://" + process.cwd() + "/index.html"
         );
 
-        // Test 1: Page title
+        
         const title = await driver.getTitle();
 
         assert.strictEqual(title, "JavaScript Application");
 
         console.log("Test 1 Passed: Page title verified");
 
-        // Test 2: Addition
+       
         await driver.findElement(By.id("num1")).sendKeys("10");
         await driver.findElement(By.id("num2")).sendKeys("20");
 
